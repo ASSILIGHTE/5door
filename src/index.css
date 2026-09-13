@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #14111A;
+  --color-mahogany: #2E2236;
+  --color-wine: #4D3352;
+  --color-rose: #F4C2C2;
+  --color-blush: #F9D5D6;
+  --color-lavender: #D8BBFF;
+  --color-cream: #FFF1E6;
+  --color-peach: #FDE2E4;
+  --color-champagne: #F0E6D2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-cream);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-handwriting {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #14111A;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B2B45;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #523960;
+}
+
+/* Ambient Vignette Overlay */
+.vignette-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 40%, transparent 45%, rgba(20, 17, 26, 0.94) 100%);
+  z-index: 2;
+}
+
+/* 3D Door Perspective */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+/* Soft Pastel Glassmorphism Card */
+.glass-card {
+  background: rgba(36, 27, 44, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(244, 194, 194, 0.22);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 35px rgba(244, 194, 194, 0.1);
+}
+
+.glass-card-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(244, 194, 194, 0.5);
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(244, 194, 194, 0.2);
+}
+
+/* Pastel Text Accent Glow */
+.text-pastel-pink {
+  color: #F4C2C2;
+  text-shadow: 0 2px 12px rgba(244, 194, 194, 0.3);
+}
+
+.text-pastel-lavender {
+  color: #D8BBFF;
+  text-shadow: 0 2px 12px rgba(216, 187, 255, 0.3);
+}
+
+/* Polaroid Paper Frame Visual */
+.polaroid-frame {
+  background: #FFF1E6;
+  color: #2E2236;
+  padding: 12px 12px 36px 12px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 10px rgba(244, 194, 194, 0.2);
+  border-radius: 6px;
+  transform: rotate(-1.5deg);
+  transition: transform 0.5s ease;
+}
+.polaroid-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* Parchment Letter Visual */
+.parchment-paper {
+  background-color: #FFF1E6;
+  background-image: radial-gradient(rgba(82, 51, 84, 0.04) 1px, transparent 0);
+  background-size: 16px 16px;
+  color: #2E2236;
+  border: 1px solid #F4C2C2;
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.85), inset 0 0 40px rgba(244, 194, 194, 0.2);
+}
